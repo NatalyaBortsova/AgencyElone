@@ -1,0 +1,65 @@
+.hero {
+    padding: 100px 0;
+
+    @include r(768) {
+        padding: 60px 0;
+    }
+
+    &__inner {
+        position: relative;
+
+        @include r(580) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        max-width: 653px;
+        padding-top: 5px;
+        margin-bottom: 72px;
+
+        @include r(768) {
+            max-width: 453px;
+            margin-bottom: 50px;
+        }
+
+        @include r(580) {
+            margin-bottom: 35px;
+        }
+
+        @include r(375) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        background-color: transparent;
+        top: -40px;
+        right: 0;
+        z-index: -1;
+        max-width: 566px;
+        height: 403px;
+
+        @include r(992) {
+            max-width: 466px;
+            height: 318px;
+            top: 0;
+        }
+
+        @include r(768) {
+            max-width: 315px;
+            height: 245px;            
+        }
+
+        @include r(580) {
+            position: static;
+        }
+    }
+}

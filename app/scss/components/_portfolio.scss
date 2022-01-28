@@ -1,0 +1,126 @@
+.portfolio {
+    padding: 70px 0 100px;
+
+    @include r(992) {
+        padding: 60px 0 80px;
+    }
+
+    @include r(768) {
+        padding: 40px 0 60px;
+    }
+
+    @include r(580) {
+        padding: 30px 0 60px;
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+
+        @include r(992) {
+            text-align: center;
+        }
+    }
+
+    &__filter {
+        display: flex;
+        margin-bottom: 31px;
+
+        @include r(992) {
+            justify-content: center;
+        }
+        @include r(768) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__button {
+        position: relative;
+
+        &.active {
+            transition: all 0.5s;
+
+            &::before {
+                @include pseudo;
+                height: 2px;
+                width: 100%;
+                background: linear-gradient(262.95deg, #FFE600 0%, #FA940B 99.33%);
+                left: 0;
+                bottom: -6px;               
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 60px;
+            @include r(768) {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 20px;
+        row-gap: 30px;
+        flex-wrap: wrap;
+
+        @include r(992) {
+            justify-content: center;
+        }
+        @include r(768) {
+            row-gap: 20px;
+        }
+    }
+
+    &__item {
+        &.active {
+            display: block;
+            transition: all 0.5s;
+        }
+
+        &.delete {
+            display: none;
+            transition: all 0.5s;
+        }
+
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            max-width: 284px;
+        }
+
+        &-subtitle {
+            display: block;
+            font-size: 16px;
+            line-height: 1.75;
+            font-weight: 400;
+            max-width: 393px;
+        }
+    }
+
+    &__image {
+        width: 340px;
+        height: 240px;
+        margin-bottom: 18px;
+        box-shadow: -20px 20px 0 -17px #FA940B,
+            20px -20px 0 -17px #FA940B,
+            20px 20px 0 -20px #FFE600,
+            0 0 0 2px #FFE600;
+
+        @include r(1110) {
+            width: 300px;
+            height: 200px;
+        }
+        @include r(992) {
+            margin-bottom: 10px;
+        }
+        @include r(768) {
+            width: 265px;
+            height: 180px;
+        }
+    }
+}

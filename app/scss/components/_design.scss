@@ -1,0 +1,115 @@
+.design {
+    padding: 70px 0 100px;
+
+    @include r(992) {
+        padding: 60px 0 80px;
+    }
+
+    @include r(768) {
+        padding: 40px 0 60px;
+    }
+
+    @include r(580) {
+        padding: 30px 0 60px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include r(768) {
+            justify-content: space-between;
+        }
+
+        @include r(580) {
+            flex-direction: column-reverse;
+        }
+
+    }
+
+    &__image {
+        width: 430px;
+        height: 430px;
+        margin-right: 60px;
+
+        @include r(992) {
+            width: 350px;
+            height: 350px;
+        }
+
+        @include r(768) {
+            width: 300px;
+            height: 300px;
+        }
+        @include r(580) {
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        @include r(580) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 47px;
+
+        @include r(992) {
+            margin-bottom: 35px;
+        }
+
+        @include r(375) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__list {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 51px;
+
+        @include r(992) {
+            font-size: 18px;
+            margin-bottom: 43px;
+        }
+
+        @include r(768) {
+            font-size: 16px;
+        }
+
+        @include r(992) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 15px;
+
+        &::before {
+            @include pseudo;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: 11px;
+            left: 0;
+            background-image: linear-gradient(262.95deg, #FFE600 0%, #FA940B 99.33%);
+            box-shadow: 0px 1px 8px rgba(7, 39, 92, 0.1);
+
+            @include r(992) {
+                top: 8px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @include r(992) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
