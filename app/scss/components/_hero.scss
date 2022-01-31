@@ -45,7 +45,7 @@
         right: 0;
         z-index: -1;
         max-width: 566px;
-        height: 403px;
+        height: 410px;
 
         @include r(992) {
             max-width: 466px;
@@ -55,11 +55,15 @@
 
         @include r(768) {
             max-width: 315px;
-            height: 245px;            
+            height: 245px;
         }
 
         @include r(580) {
             position: static;
         }
+    }
+
+    &__button {
+        display: inline-block;
     }
 }

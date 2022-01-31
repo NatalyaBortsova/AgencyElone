@@ -13,6 +13,12 @@ body {
     }
 }
 
+input {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
 .container {
     max-width: 1170px;
     padding: 0 15px;
@@ -63,7 +69,9 @@ body {
 
 .button {
     background-image: $btn;
+    font-family: 'Rubik';
     font-size: 18px;
+    font-weight: 500;
     padding: 15px 24px;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
     border-radius: 27px;

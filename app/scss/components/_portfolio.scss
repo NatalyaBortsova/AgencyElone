@@ -21,6 +21,14 @@
         @include r(992) {
             text-align: center;
         }
+
+        @include r(580) {
+            font-size: 32px;
+        }
+
+        @include r(320) {
+            font-size: 30px;
+        }
     }
 
     &__filter {
@@ -30,6 +38,7 @@
         @include r(992) {
             justify-content: center;
         }
+
         @include r(768) {
             flex-direction: column;
             align-items: center;
@@ -48,12 +57,13 @@
                 width: 100%;
                 background: linear-gradient(262.95deg, #FFE600 0%, #FA940B 99.33%);
                 left: 0;
-                bottom: -6px;               
+                bottom: -6px;
             }
         }
 
         &:not(:last-child) {
             margin-right: 60px;
+
             @include r(768) {
                 margin: 0 0 20px 0;
             }
@@ -69,6 +79,7 @@
         @include r(992) {
             justify-content: center;
         }
+
         @include r(768) {
             row-gap: 20px;
         }
@@ -115,9 +126,11 @@
             width: 300px;
             height: 200px;
         }
+
         @include r(992) {
             margin-bottom: 10px;
         }
+
         @include r(768) {
             width: 265px;
             height: 180px;

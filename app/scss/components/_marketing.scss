@@ -61,8 +61,16 @@
             margin-bottom: 35px;
         }
 
+        @include r(580) {
+            font-size: 32px;
+        }
+
         @include r(375) {
             margin-bottom: 24px;
+        }
+
+        @include r(320) {
+            font-size: 30px;
         }
     }
 
@@ -112,5 +120,9 @@
                 margin-bottom: 20px;
             }
         }
+    }
+
+    &__button {
+        display: inline-block;
     }
 }
